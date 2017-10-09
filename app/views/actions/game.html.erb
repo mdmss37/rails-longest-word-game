@@ -1,0 +1,20 @@
+<h1>Actions#game</h1>
+<p>Find me in app/views/actions/game.html.erb</p>
+
+<% start_time = Time.now %>
+
+<ul class="list-inline">
+<% @random_char.each do |char| %>
+  <li class="list-inline-item"><h2><%= char %></h2></li>
+<% end %>
+</ul>
+
+<%= @country %>
+
+<form action="/score">
+  <label for="game">Create Word from these chars</label>
+  <input type="text" id="game" name="attempt" placeholder="what is your answer?">
+  <input id="game" name="start_time" value="<%= Time.now %>">
+  <input id="game" name="grid" value="<%= @random_char %>">
+  <input type="submit" value="Go on!">
+</form>

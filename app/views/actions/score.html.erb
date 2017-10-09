@@ -1,0 +1,11 @@
+<h1>Actions#score</h1>
+<p>Find me in app/views/actions/score.html.erb</p>
+<%= @params %>
+<%= @answer %>
+<%= @game_result %>
+<ul class="list-group">
+  <li class="list-group-item"><h2>Score: <%= @game_result[:score] %></h2></li>
+  <li class="list-group-item"><h2><%= @game_result[:message] %></h2></li>
+  <li class="list-group-item"><h2><%= @scores %></h2></li>
+  <li class="list-group-item"><h2><%= @scores.inject(:+)/@scores.length %></h2></li>
+</ul>
